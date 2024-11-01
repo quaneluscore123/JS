@@ -585,8 +585,19 @@ var fullName = firstName + ' ' + lastName;
         return flatOutput.concat(depthitem);
     }, []);
 
-    
+    String/Array.prototype.includes tìm chuỗi
+    title.includes('', (vị trí)); --> String
+
+    Array = ['JS', 'Java']
+    title.includes('');
 */
 
+/*
+    Call back?
+
+    1. Là hàm 
+    2. Được chuyền qua đối số
+
+*/
 
 
