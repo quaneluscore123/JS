@@ -646,8 +646,18 @@ courses.forEach2(function(course, index, array) {
     console.log(course, index, array)
 });
 
+// Filter2 -- Loc 
+Array.prototype.filter2 = function(callback) {
+    for( var index in this){
+        if(this.hasOwnProperty(index)){
+            callback(this[index], index, this)
+        }
+    }
+}
+
 */
 
+// Some true/false
 
 
 
