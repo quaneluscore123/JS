@@ -655,9 +655,30 @@ Array.prototype.filter2 = function(callback) {
     }
 }
 
+// Some true/false --> 1 trong cac ptu thoa man dieu kien
+Array.prototype.some2 = function(callback) {
+    for(var index in this){
+        if(this.hasOwnProperty(index)){
+            if(callback(this[index], index, this)){
+                return true;
+            };
+        }
+    }
+    return false;
+};
+
+// Every: true/false --> tat ca phai thoa man dieu kien 
+
+Array.prototype.every2 = function(callback){
+    var output = true;
+    for...
+        if(!callback(this[index], index, this)){
+            return output = false;
+        }
+}
 */
 
-// Some true/false
+// DOM 
 
 
 
