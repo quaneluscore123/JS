@@ -597,7 +597,58 @@ var fullName = firstName + ' ' + lastName;
 
     1. Là hàm 
     2. Được chuyền qua đối số
+    3. Được gọi lại (trong hàm nhận đối số)
+    
+Array.prototype.map2 = function(callback) {
+    var output = [];
+    var arrayLength = this.length;
+
+    for( var i = 0; i < this.length; ++i){
+        var result = callback(this[i], i);
+        output.push(result);
+    }
+
+    return output;
+}
+
+var courses = [
+    'JS',
+    'PHP',
+    'Ruby'
+];
+
+var htmls = courses.map2(function(course, index) {
+    return `<h2>${course}</h2>`
+});
+
+for( var index in courses){}
+
+console.log(htmls.join('')); 
+
+
+// ForEach
+Array.prototype.forEach2 = function(callback){ // dinh nghia cho forEach2 thanh mang trong proto cua console
+    for( var index in this){ // duyet luon ca proto cua console
+        if(this.hasOwnProperty(index)){ // check attribute gan nhat  
+            console.log('index: ', index);
+            callback(this[index], index, this);
+        }   
+    }
+}
+
+var courses = [
+    'JS',
+    'PHP',
+    'Ruby'
+];
+
+courses.forEach2(function(course, index, array) {
+    console.log(course, index, array)
+});
 
 */
+
+
+
 
 
