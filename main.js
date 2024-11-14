@@ -678,7 +678,40 @@ Array.prototype.every2 = function(callback){
 }
 */
 
-// DOM 
+//==============================================================================
+
+// HTML DOM, DOM API(Document object model)
+/* 
+    1. Element: ID, tag, class, CSS selector, HTML selector
+    2. Attribute
+    3. Text
+*/
+
+//-------------------------------------------------------------------------
+
+// JavaScript: Browser | Server (NodeJS)
+// Browser: HTML -> DOM -> DOM API
+
+// document.write('Hello Guys!');
+
+// var headingNode = document.getElementById('heading'); --> id
+// console.log(headingNode);
+// console.log({
+//     element: headingNode
+// });
+
+// document.getElementsByClassName --> class
+// document.getElementsByTagName --> thẻ h1....
+// document.querySelector('html .box .heading');
+// document.querySelectorAll
+// document.forms['forms-1']
+// document.forms.testForm
+// document.anchors
+
+/* 
+
+*/
+
 
 
 
