@@ -708,11 +708,16 @@ Array.prototype.every2 = function(callback){
 // document.forms.testForm
 // document.anchors
 
-/* 
+// AttributeNode & Text node
+// ==========================================================
 
-*/
+//         DOM Attributte
 
-
-
+// var headingElement = document.querySelector('h1');
+// headingElement.title = 'heading';
+// headingElement.id = 'heading';
+// headingElement.className = 'heading';
+// headingElement.href = 'heading';
+// headingElement.setAttribute('class', 'heading');
 
 
