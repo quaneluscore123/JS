@@ -719,5 +719,12 @@ Array.prototype.every2 = function(callback){
 // headingElement.className = 'heading';
 // headingElement.href = 'heading';
 // headingElement.setAttribute('class', 'heading');
+// headingElement.getAttribute('title');
 
+
+//      Inner Text va Text Content Property --> sua 1 textnode
+
+var headingElement = document.querySelector('.heading');
+headingElement.innerHTML = 'New heading';
+// headingElement.textContent = 'New heading';
 
