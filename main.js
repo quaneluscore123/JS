@@ -724,7 +724,12 @@ Array.prototype.every2 = function(callback){
 
 //      Inner Text va Text Content Property --> sua 1 textnode
 
-var headingElement = document.querySelector('.heading');
-headingElement.innerHTML = 'New heading';
-// headingElement.textContent = 'New heading';
+// var headingElement = document.querySelector('.heading');
+// headingElement.innerText = 'New heading'; --> trả về giống với web thực hiện trên màn hình -- không hiện đoạn mã code nào cả, bỏ qua elementnode
+// headingElement.textContent = 'New heading'; --> lấy nguyên bản của html hiện trên console -- cả code style vì nó cũng là textnode, bỏ qua elementnode
 
+
+// InnerHTML, OuterHTML
+// var boxElement = document.querySelector('.box');
+// boxElement.innerHTML = '<h1>Heading</h1>' // Them element h1 -- setter cho Heading co thuoc tinh h1
+// outerHTML ghi de len element va khong hien o dom hay console
