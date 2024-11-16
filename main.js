@@ -733,3 +733,6 @@ Array.prototype.every2 = function(callback){
 // var boxElement = document.querySelector('.box');
 // boxElement.innerHTML = '<h1>Heading</h1>' // Them element h1 -- setter cho Heading co thuoc tinh h1
 // outerHTML ghi de len element va khong hien o dom hay console
+// document.getElementsByTagName('ul')[0];
+
+//      Node Properties
