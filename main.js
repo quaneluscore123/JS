@@ -736,3 +736,16 @@ Array.prototype.every2 = function(callback){
 // document.getElementsByTagName('ul')[0];
 
 //      Node Properties
+// var boxElement = document.querySelector('.box'); 
+// Object.assign(boxElement.style, { --> internal
+//     width: '200px',
+//     height: '100px',
+//     backgroundColor: 'green',
+// });
+// console.log(boxElement.style.width);
+
+//      ClassList property
+// add, contains, remove, toggle
+
+var boxElement = document.querySelector('.box');
+
