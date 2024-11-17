@@ -744,8 +744,16 @@ Array.prototype.every2 = function(callback){
 // });
 // console.log(boxElement.style.width);
 
-//      ClassList property
-// add, contains, remove, toggle
+//      ClassList property --  chứa danh sách các class của element đó.
+// add, -- them class
+// contains, -- kiem tra xem trong 1 ptu co 1 ptu con khac khong  - co ton tai class y khong
+// remove, -- xoa class
+// toggle -- Bật/tắt class( setTimeOut, setInterval) -- mo menu/dong menu
+// var boxElement = document.querySelector('.box');
+// console.log(boxElement.classList.add('red'));
 
-var boxElement = document.querySelector('.box');
+// Arrow function
+// (parameter) => { statement(s) } -- tham so => gia tri
+
+//          DOM Event
 
