@@ -756,4 +756,9 @@ Array.prototype.every2 = function(callback){
 // (parameter) => { statement(s) } -- tham so => gia tri
 
 //          DOM Event
+// 1. Attribute events
+// 2. Assign event using the element node
+// onclick -- click chuot
+// onmouseover -- di chuot vao
+// su kien noi bot chi can 1 su kien o the cha thi cac the con ben trong cung duoc huong
 
