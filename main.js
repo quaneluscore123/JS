@@ -762,3 +762,8 @@ Array.prototype.every2 = function(callback){
 // onmouseover -- di chuot vao
 // su kien noi bot chi can 1 su kien o the cha thi cac the con ben trong cung duoc huong
 
+// Sử dụng onclick để đổi màu khi click chuột vào button
+// var click = document.querySelector('button');
+// click.onclick = function() {
+//     click.style.color = '#fff';
+// };
