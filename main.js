@@ -763,7 +763,26 @@ Array.prototype.every2 = function(callback){
 // su kien noi bot chi can 1 su kien o the cha thi cac the con ben trong cung duoc huong
 
 // Sử dụng onclick để đổi màu khi click chuột vào button
-// var click = document.querySelector('button');
+// 
 // click.onclick = function() {
 //     click.style.color = '#fff';
 // };
+
+// var click = document.querySelectorAll('button');
+
+// for( var i = 0 ; i < click.length ; i++){
+//     click[i].onclick = function(e){
+//         console.log(e.target);
+//     }
+// };
+
+//      DOM events exmaple
+
+// 1. Input / select 
+// 2. Key up / down
+
+var inputElement = document.querySelector('input[type="text"]');
+
+inputElement.onchange = function(e) {
+    
+}
