@@ -781,8 +781,19 @@ Array.prototype.every2 = function(callback){
 // 1. Input / select 
 // 2. Key up / down
 
-var inputElement = document.querySelector('input[type="text"]');
+// The input
+// var inputElement = document.querySelector('input[type="text"]');
+// inputElement.onchange = function(e) { //oninput
+//     console.log(e.target.value);
+// }
 
-inputElement.onchange = function(e) {
-    
-}
+// Checkbox
+// var inputElement = document.querySelector('input[type="check"]'); --> text/check/select
+// inputElement.onchange = function(e);
+
+// Key up/ Key down
+// var inputElement = document.querySelector('input[type="text"]');
+// inputElement.onkeydown = function(e) {       // onkeyup -- an phim nhac len
+//     console.log(e.target.value);             // onkeypress -- giu phim va no se in ra lien tuc gia tri cua phim do
+// }
+
