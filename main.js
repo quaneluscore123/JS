@@ -811,3 +811,16 @@ Array.prototype.every2 = function(callback){
 //     }
 // }
 
+// var ulElement = document.querySelector('ul');
+// ulElement.onmousedown = function(e) {
+//     e.preventDefault();
+// }
+// ulElement.onclick = function(e) {
+//     console.log(e.target);
+// }
+
+// document.querySelector('button').onclick = function(e) {
+//     e.stopPropagation();
+//     console.log('Click me!');
+// }
+
