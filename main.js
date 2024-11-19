@@ -797,3 +797,17 @@ Array.prototype.every2 = function(callback){
 //     console.log(e.target.value);             // onkeypress -- giu phim va no se in ra lien tuc gia tri cua phim do
 // }
 
+// 1. preventDefault
+// 2. stopPropagation
+// var aElements = document.links;
+// var aElements = document.anchors -- cái này là nhận thẻ a khi đặt tên
+
+// for( var i = 0; i < aElements.length; ++i){
+//     aElements[i].onclick = function(e) {
+//         // console.log(e.target.href);
+//         if(!e.target.href.startsWith('https://f8.edu.vn')) {
+//             e.preventDefault;
+//         }
+//     }
+// }
+
