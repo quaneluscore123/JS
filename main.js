@@ -824,3 +824,27 @@ Array.prototype.every2 = function(callback){
 //     console.log('Click me!');
 // }
 
+// 1. DOM event / Event listener
+// 2. JSON
+// 3. Fetch
+// 4. DOM location
+// 5. Local storage
+// 6. Session storage
+// 7. Coding convention
+// 8. Best Practices
+// 9. Mistakes
+// 10.Performance
+
+// 1. Xu ly nhieu viec khi 1 event xay ra
+// 2. Lang nghe / Huy bo lang nghe
+
+// var btn = document.getElementById('btn');
+// function viec1() {
+//     console.log('viec 1');   
+// }
+// btn.addEventListener('click', viec1);
+// setTimeout(function() {
+//     btn.removeEventListener('click', viec1);
+// }, 3000);
+
+//          JSON
