@@ -861,4 +861,39 @@ Array.prototype.every2 = function(callback){
 //      Promise
 //      - Sync -- đồng bộ
 //      - Async -- bất đồng bộ (SetTimeout, setInterval, fetch, XMLHttpRequest, đọc file, request animation frame)
-//      
+
+//      Callback Hell
+// Pyramid of doom
+ 
+//      Concept
+// 1. new Promise
+// 2. Executor
+
+// 1. Pending
+// 2. Fulfilled
+// 3. Rejected
+// memory leak
+// var promise = new Promise(
+//     // Executor
+//     function(resolve, reject) {
+//         // Logic
+//         // Thanh cong: resolve()
+//         // That bai: reject()
+//     }
+// );
+
+// promise // Xử lý thao tác bất đồng bộ --> call back --> call back hell
+// để tạo promise thì ta dùng từ khoá new promise là 1 object constructor và nhận 2 tham số vào function đó là resolve và reject
+// xử lý thành công thì xài resolve, thất bại thì reject
+// xử dụng then và catch nhận từ callback 
+    // .then(function() {
+        // console.log('successfully');        
+    // })
+    // .catch( function() {
+        // console.log('successfully');
+    // })
+    // .finally( function() {
+        // console.log('successfully');
+    // })
+
+//      Chain
