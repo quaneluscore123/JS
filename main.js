@@ -848,3 +848,17 @@ Array.prototype.every2 = function(callback){
 // }, 3000);
 
 //          JSON
+// 1. Là 1 định dạng dữ liệu (chuỗi) (JavaScript Object Notation)
+// 2. JSON: Number, String, Boolean, Null, Array
+// Object
+// Mã hoá / Giải mã
+// Encode / Decode
+// Stringify: tu JS -> JSON
+// Parse: tu JSON -> JS
+// var JSON = '["JS", "PHP"]';
+// var json = '{"name" : "Son Dang", "age" : 18}'; -- json.parse để chuyển sang dữ liệu gốc là JS 
+
+//      Promise
+//      - Sync -- đồng bộ
+//      - Async -- bất đồng bộ (SetTimeout, setInterval, fetch, XMLHttpRequest, đọc file, request animation frame)
+//      
