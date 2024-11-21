@@ -886,6 +886,7 @@ Array.prototype.every2 = function(callback){
 // để tạo promise thì ta dùng từ khoá new promise là 1 object constructor và nhận 2 tham số vào function đó là resolve và reject
 // xử lý thành công thì xài resolve, thất bại thì reject
 // xử dụng then và catch nhận từ callback 
+//     promise
     // .then(function() {
         // console.log('successfully');        
     // })
@@ -896,4 +897,6 @@ Array.prototype.every2 = function(callback){
         // console.log('successfully');
     // })
 
-//      Chain
+//      Chain ( tính chất chuỗi )
+// 
+// 
