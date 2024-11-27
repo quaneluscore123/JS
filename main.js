@@ -524,7 +524,7 @@ var fullName = firstName + ' ' + lastName;
     some(); --> Chỉ cần 1 trong tất cả phần tử thoả mãn điều kiện trả về true
     find(); --> Tìm kiếm trả về 1 ptu gần nhất thoả mãn điều kiện 
     filter(); --> Tìm kiếm trả về nhiều ptu( danh sách) thoả mãn điều kiện 
-    map(); --> thay đổi element trong 1 array
+    map(); -->  duyệt qua từng phần tử của mảng và tạo ra một mảng mới
     reduce(); --> tính tổng value trong 1 chuỗi có nhiều phần tử trùng key
 
     courses.forEach(function (course, index){
@@ -897,6 +897,10 @@ Array.prototype.every2 = function(callback){
         // console.log('successfully');
     // })
 
+    // try: Chứa đoạn mã có thể phát sinh lỗi.
+    // catch: Xử lý lỗi nếu có.
+    // finally: Luôn được thực thi bất kể có lỗi hay không.
+
 //      Chain ( tính chất chuỗi )
 //      Promise methods (resolve, reject, all)
 // Khi có reject thì phải catch thì lệnh promise mới chạy được
@@ -922,3 +926,7 @@ Array.prototype.every2 = function(callback){
 
 // C2: 
 // var promise = Promise.reject('Error!');
+// Promise.all([]) ben trong la 1 mang. Sau no la then 
+
+//      Promise example
+//      Fetch
