@@ -928,5 +928,22 @@ Array.prototype.every2 = function(callback){
 // var promise = Promise.reject('Error!');
 // Promise.all([]) ben trong la 1 mang. Sau no la then 
 
-//      Promise example
 //      Fetch
+
+// API (URL) -> Application programing interface
+
+// Backend -> API -> Fetch -> JSON/XML
+// JSON.parse -> JS types
+// Render ra giao dien voi HTML
+
+// var postAPI = 
+//     'https://jsonplaceholder.typicode.com/posts'
+
+// fetch(postAPI)
+//     .then(function(response) {
+//         return response.json();
+//         // JSON.parse: tu JSON -> JS types
+//     })
+//     .then(function(posts) {
+//         console.log(posts);
+//     });
