@@ -945,4 +945,11 @@ Array.prototype.every2 = function(callback){
 
 //      JSON server
 // La thu vien co the Fake ra 1 API server
-// M
+// var coursesApi = 'http://localhost:3000/courses';
+// fetch(coursesApi)
+//     .then(function(response) {
+//         return response.json();
+//     })
+//     .then(function(courses) {
+//         console.log(courses);
+//     })
