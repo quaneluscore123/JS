@@ -898,5 +898,27 @@ Array.prototype.every2 = function(callback){
     // })
 
 //      Chain ( tính chất chuỗi )
-// 
-// 
+//      Promise methods (resolve, reject, all)
+// Khi có reject thì phải catch thì lệnh promise mới chạy được
+
+// 1. Promise.resolve
+// 2. Promise.reject
+// 3. Promise.all
+
+// C1:
+// var promise = new Promise(
+//     function(resolve, reject){
+//         resolve('Success!');
+//     }
+// );
+
+// promise 
+//     .then(function (result) {
+//         console.log('result: ', result);
+//     })
+//     .catch(function(err) {
+//         //...
+//     })
+
+// C2: 
+// var promise = Promise.reject('Error!');
