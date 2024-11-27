@@ -915,7 +915,6 @@ Array.prototype.every2 = function(callback){
 //         resolve('Success!');
 //     }
 // );
-
 // promise 
 //     .then(function (result) {
 //         console.log('result: ', result);
@@ -929,16 +928,12 @@ Array.prototype.every2 = function(callback){
 // Promise.all([]) ben trong la 1 mang. Sau no la then 
 
 //      Fetch
-
 // API (URL) -> Application programing interface
-
 // Backend -> API -> Fetch -> JSON/XML
 // JSON.parse -> JS types
 // Render ra giao dien voi HTML
-
 // var postAPI = 
 //     'https://jsonplaceholder.typicode.com/posts'
-
 // fetch(postAPI)
 //     .then(function(response) {
 //         return response.json();
@@ -947,3 +942,5 @@ Array.prototype.every2 = function(callback){
 //     .then(function(posts) {
 //         console.log(posts);
 //     });
+
+//      JSON server
