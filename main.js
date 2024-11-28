@@ -956,4 +956,37 @@ Array.prototype.every2 = function(callback){
 
 //      Postman
 //      CRUD ( create -> POST, read -> GET, update -> PUT/PATCH, delete-> DELETE)
-//      
+
+var listCoursesBlock = document.querySelector('#list-courses');
+
+var coursesApi = 'http://localhost:3000/courses';
+
+function start() {
+    getCourses(function(courses) {
+        renderCourses(courses);
+    });
+}
+
+start();
+
+// Function
+function getCourses(callback) {
+    fetch(coursesApi)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(callback);
+}
+
+function renderCourses(courses) {
+    var listCoursesBlock = document.querySelector('#list-courses');
+    var htmls = courses.map(function(course) {
+        return `
+        <li>
+            <h4>${course.name}</h4>
+            <p>${course.description}</p>
+        </li>
+        `;
+    });
+    listCoursesBlock.innerHTML = htmls.join();
+}
