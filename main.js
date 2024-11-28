@@ -979,9 +979,12 @@ function getCourses(callback) {
 }
 
 function createCourse(data) {
-    var option = {
+    var options = {
         method: 'POST',
-        body: JSON.stringify(data)
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data),
     };
     fetch(coursesApi, options)
         .then(function(response) {
@@ -990,17 +993,37 @@ function createCourse(data) {
         .then(callback);
 }
 
+function deleteCourse(id) {
+    var options = {
+        method: 'DELETE',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+    };
+    fetch(coursesApi + '/' + id, options)
+        .then(function(response) {
+            response.json();
+        })
+        .then(function() {
+            var courseItem = document.querySelector('.course-item-' + id);
+            if(courseItem){
+                courseItem.remove();
+            }
+        });
+}
+
 function renderCourses(courses) {
     var listCoursesBlock = document.querySelector('#list-courses');
     var htmls = courses.map(function(course) {
         return `
-        <li>
+        <li class="course-item-${course.id}">
             <h4>${course.name}</h4>
             <p>${course.description}</p>
+            <button onclick="deleteCourse(${course.id})">Xoá</button>
         </li>
         `;
     });
-    listCoursesBlock.innerHTML = htmls.join();
+    listCoursesBlock.innerHTML = htmls.join('');
 }
 
 function handleCreateForm() {
@@ -1014,6 +1037,8 @@ function handleCreateForm() {
             name: name,
             description: description
         };
-        createCourse(formData);
+        createCourse(formData, function() {
+            getCourses(renderCourses);
+        });
     }
 }
