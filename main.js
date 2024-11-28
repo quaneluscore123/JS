@@ -975,7 +975,10 @@ function getCourses(callback) {
         .then(function(response) {
             return response.json();
         })
-        .then(callback);
+        .then(callback)
+        .catch(function(error) {
+            console.error('Failed to fetch courses:', error);
+        });
 }
 
 function createCourse(data) {
@@ -988,9 +991,12 @@ function createCourse(data) {
     };
     fetch(coursesApi, options)
         .then(function(response) {
-            response.json();
+            return response.json();
         })
-        .then(callback);
+        .then(callback)
+        .catch(function(error) { 
+            console.error('Failed to create course:', error);
+        });
 }
 
 function deleteCourse(id) {
@@ -1002,13 +1008,16 @@ function deleteCourse(id) {
     };
     fetch(coursesApi + '/' + id, options)
         .then(function(response) {
-            response.json();
+            return response.json();
         })
         .then(function() {
             var courseItem = document.querySelector('.course-item-' + id);
             if(courseItem){
                 courseItem.remove();
             }
+        })
+        .catch(function(error) { 
+            console.error('Failed to delete course:', error);
         });
 }
 
@@ -1030,8 +1039,8 @@ function handleCreateForm() {
     var createBtn = document.querySelector('#create');
 
     createBtn.onclick = function() {
-        var name = document.querySelector('input[name="name"]');
-        var description = document.querySelector('input[name="description"]');
+        var name = document.querySelector('input[name="name"]').value;
+        var description = document.querySelector('input[name="description"]').value;
 
         var formData = {
             name: name,
