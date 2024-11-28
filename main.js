@@ -953,3 +953,7 @@ Array.prototype.every2 = function(callback){
 //     .then(function(courses) {
 //         console.log(courses);
 //     })
+
+//      Postman
+//      CRUD ( create -> POST, read -> GET, update -> PUT/PATCH, delete-> DELETE)
+//      
