@@ -962,9 +962,9 @@ var listCoursesBlock = document.querySelector('#list-courses');
 var coursesApi = 'http://localhost:3000/courses';
 
 function start() {
-    getCourses(function(courses) {
-        renderCourses(courses);
-    });
+    getCourses(renderCourses);
+
+    handleCreateForm();
 }
 
 start();
@@ -974,6 +974,18 @@ function getCourses(callback) {
     fetch(coursesApi)
         .then(function(response) {
             return response.json();
+        })
+        .then(callback);
+}
+
+function createCourse(data) {
+    var option = {
+        method: 'POST',
+        body: JSON.stringify(data)
+    };
+    fetch(coursesApi, options)
+        .then(function(response) {
+            response.json();
         })
         .then(callback);
 }
@@ -989,4 +1001,19 @@ function renderCourses(courses) {
         `;
     });
     listCoursesBlock.innerHTML = htmls.join();
+}
+
+function handleCreateForm() {
+    var createBtn = document.querySelector('#create');
+
+    createBtn.onclick = function() {
+        var name = document.querySelector('input[name="name"]');
+        var description = document.querySelector('input[name="description"]');
+
+        var formData = {
+            name: name,
+            description: description
+        };
+        createCourse(formData);
+    }
 }
