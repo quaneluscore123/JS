@@ -954,6 +954,8 @@ Array.prototype.every2 = function(callback){
 //         console.log(courses);
 //     })
 
+// ==================================================================================================
+
 //      Postman
 //      CRUD ( create -> POST, read -> GET, update -> PUT/PATCH, delete-> DELETE)
 
@@ -1100,3 +1102,4 @@ Array.prototype.every2 = function(callback){
 //     document.querySelector('input[name="description"]').value = '';
 //     editingId = null;
 // }
+// ===============================================================================================
