@@ -1012,13 +1012,22 @@ function deleteCourse(id) {
         })
         .then(function() {
             var courseItem = document.querySelector('.course-item-' + id);
-            if(courseItem){
+            if(courseItem) {
                 courseItem.remove();
             }
         })
-        .catch(function(error) { 
-            console.error('Failed to delete course:', error);
-        });
+}
+
+function updateCourse(id, formData, callback) {
+    fetch(`${coursesApi}/${id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(callback)
 }
 
 function renderCourses(courses) {
@@ -1029,6 +1038,7 @@ function renderCourses(courses) {
             <h4>${course.name}</h4>
             <p>${course.description}</p>
             <button onclick="deleteCourse(${course.id})">Xoá</button>
+            <button onclick="handleUpdateForm(${course.id})">Sửa</button>
         </li>
         `;
     });
@@ -1050,4 +1060,43 @@ function handleCreateForm() {
             getCourses(renderCourses);
         });
     }
+}
+
+let editingId = null; // Biến toàn cục lưu ID đang chỉnh sửa
+
+function handleUpdateForm(id) {
+    editingId = id; // Lưu ID của khóa học cần sửa
+    var courseItem = document.querySelector('.course-item-' + id);
+    var courseName = courseItem.querySelector('h4').innerText;
+    var courseDescription = courseItem.querySelector('p').innerText;
+
+    // Đổ dữ liệu cũ vào form
+    document.querySelector('input[name="name"]').value = courseName;
+    document.querySelector('input[name="description"]').value = courseDescription;
+
+    // Thay đổi nút từ "Tạo" thành "Cập nhật"
+    var submitBtn = document.querySelector('#create');
+    submitBtn.textContent = 'Cập nhật';
+    
+    submitBtn.onclick = function(event) {
+        event.preventDefault(); 
+        var updatedName = document.querySelector('input[name="name"]').value;
+        var updatedDescription = document.querySelector('input[name="description"]').value;
+
+        var dataUpdate = {
+            name: updatedName,
+            description: updatedDescription,
+        };
+
+        updateCourse(editingId, dataUpdate, function() {
+            getCourses(renderCourses); 
+            resetForm(); 
+        });
+    };
+}
+
+function resetForm() {
+    document.querySelector('input[name="name"]').value = '';
+    document.querySelector('input[name="description"]').value = '';
+    editingId = null;
 }
