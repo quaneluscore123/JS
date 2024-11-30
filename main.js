@@ -1103,3 +1103,9 @@ Array.prototype.every2 = function(callback){
 //     editingId = null;
 // }
 // ===============================================================================================
+
+// 1. Var / Let, Const: Scope, Hosting
+// 2. Const / Var, Let: Assignment
+// Code block: if else, loop, {},...
+// Phạm vi bên ngoài block thì let, const sẽ không truy cập được -- theo kiểu cha con -- phải theo tuần tự
+// var thì có thể truy cập cả bên trong lẫn bên ngoài
