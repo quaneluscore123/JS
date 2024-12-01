@@ -1109,3 +1109,17 @@ Array.prototype.every2 = function(callback){
 // Code block: if else, loop, {},...
 // Phạm vi bên ngoài block thì let, const sẽ không truy cập được -- theo kiểu cha con -- phải theo tuần tự
 // var thì có thể truy cập cả bên trong lẫn bên ngoài
+
+//     Template literals / Multi-lines String
+//     Arrow function 
+// const logger = (log) => {
+//     console.log(log);
+// }
+// logger('Message...');
+
+// const obj = {
+//     name: 'JS',
+//     getName: () => {
+//         return this.name; // context
+//     }
+// };
