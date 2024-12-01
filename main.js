@@ -1136,3 +1136,9 @@ Array.prototype.every2 = function(callback){
 // }
 // const php = new Course('PHP', 1000);
 
+//      Default parameter values
+// function logger(log = 'Gia tri mac dinh', type = 'log') {
+//     console.log(log);
+//     console[type](log);
+// };
+// logger(undefined);
