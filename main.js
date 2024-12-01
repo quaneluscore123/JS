@@ -1142,3 +1142,18 @@ Array.prototype.every2 = function(callback){
 //     console[type](log);
 // };
 // logger(undefined);
+
+//      Enhanced object literals
+// 1. Định nghĩa key: value cho object
+// 2. ĐỊnh nghĩa method cho object
+// 3. ĐỊnh nghĩa cho key cho object dưới dạng 
+// var name = 'js';
+// var price = 3000;
+// var course = {
+//     name, 
+//     price,
+//     getName() {
+//         return this.name;
+//     },
+//     [name]: 'PHP',
+// }
