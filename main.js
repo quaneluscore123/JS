@@ -1182,3 +1182,8 @@ Array.prototype.every2 = function(callback){
 // Doi voi object thi sai {} --> Object thi co key va value
 // Chuoi thi chi la liet ke cac phan tu thoi
 
+//      Spread(...)
+// var array = ['js', 'php'];
+// var array2 = ['react', 'dart'];
+// var array3 = [...array2, ...array]; // Spread k co phan tu dau [a,...rest] thi no se lay phan tu theo thu tu
+
