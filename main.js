@@ -1145,7 +1145,7 @@ Array.prototype.every2 = function(callback){
 
 //      Enhanced object literals
 // 1. Định nghĩa key: value cho object
-// 2. ĐỊnh nghĩa method cho object
+// 2. Đinh nghĩa method cho object
 // 3. ĐỊnh nghĩa cho key cho object dưới dạng 
 // var name = 'js';
 // var price = 3000;
@@ -1157,3 +1157,28 @@ Array.prototype.every2 = function(callback){
 //     },
 //     [name]: 'PHP',
 // }
+
+//      Destructuring, Rest ( Phan ra)
+// Cach thong thuong
+// var array = ['js', 'php'];
+
+// var a = array[0];
+// var b = array[1];
+// var c = array[2];
+
+// console.log(a, b, c);
+
+// C2: 
+// var array = ['js', 'php'];
+// var [a, b, c] = array;
+// console.log(a, b, c);
+
+// REST
+// var [a, ...rest] = array; --> Lay phan tu con lai sau a
+// console.log(a);
+// console.log(rest);
+// var [a, ...newObject];
+
+// Doi voi object thi sai {} --> Object thi co key va value
+// Chuoi thi chi la liet ke cac phan tu thoi
+
