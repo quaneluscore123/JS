@@ -1187,3 +1187,16 @@ Array.prototype.every2 = function(callback){
 // var array2 = ['react', 'dart'];
 // var array3 = [...array2, ...array]; // Spread k co phan tu dau [a,...rest] thi no se lay phan tu theo thu tu
 
+//      Tagged template literals
+// function highlight([first, ...strings], ...values) {
+//     return values.reduce(
+//         (acc, curr) => [...acc, `<span>${curr}</span>`, strings.shift()]
+//         [first]
+//     )
+//     .join('');
+// }
+
+// var brand = 'f8';
+// var course = 'js';
+
+// const hrml = highlight` Hoc lap trinh ${course} tai ${brand} `;
