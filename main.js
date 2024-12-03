@@ -1200,3 +1200,14 @@ Array.prototype.every2 = function(callback){
 // var course = 'js';
 
 // const hrml = highlight` Hoc lap trinh ${course} tai ${brand} `;
+
+//      Modules --> Import / Export
+// File main.js
+// import logger from './logger.js';
+// logger('Test', 'warn');
+
+// File logger.js
+// function logger(log, type = 'log') {
+
+// }
+// export default logger;
