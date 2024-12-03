@@ -1211,3 +1211,8 @@ Array.prototype.every2 = function(callback){
 
 // }
 // export default logger;
+
+//      Optional chaining(?.)
+// if( obj?.cat?.cat2?.cat3?.) { // thuc hien khi ta khong chac chan key co ton tai hay khong
+// }
+// ?.prop or ?.[expr] or ?.[index] or ?.(args)
